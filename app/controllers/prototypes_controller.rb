@@ -33,7 +33,7 @@ class PrototypesController < ApplicationController
   def update
     @prototype = Prototype.find(params[:id])
     if @prototype.update(create_params)
-      redirect_to prototype
+      redirect_to @prototype
     else
       render :edit
     end
